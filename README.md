@@ -109,3 +109,30 @@ $$
 where S is a sample of $m\ge m_\mathcal{H}^{UC}(\epsilon, \delta)$ examples drawn i.i.d. according to $\mathcal{D}$
 
 ## 系4.4 (Corollary 4.4)
+hypothesis class $\mathcal{H}$ が関数
+$m_\mathcal{H}^{UC}$
+により**uniform convergence property**を持つならば、
+
+$\mathcal{H}$は **sample complexity** $m_\mathcal{H}(\epsilon, \delta) \le m_\mathcal{H}^{UC}(\epsilon, \delta)$により**agnostic PAC learnable**である。
+
+<details>
+<summary>Proof</summary>
+
+uniform convergenceの定義により
+
+$$(\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\text{ over } Z)[\mathbb{P}_{S\sim \mathcal{D^m}}[\text{S is epsilon representative}]\ge 1-\delta]$$
+
+$$\therefore(\forall \epsilon \in (0,2))(\forall\delta)(\forall \mathcal{D}\text{ over } Z)[\mathbb{P}_{S\sim \mathcal{D^m}}[\text{S is epsilon/2 representative}]\ge 1-\delta]$$
+
+$$\therefore(\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\text{ over } Z)[\mathbb{P}_{S\sim \mathcal{D^m}}[\text{S is epsilon/2 representative}]\ge 1-\delta]$$
+
+補題4.2より
+
+$$\therefore (\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\text{ over } Z) [\mathbb{P}\_{S\sim \mathcal{D^m}} [L_\mathcal{D}(h_S)\le \min_{h'\in \mathcal{D}} L_\mathcal{D}(h')+\epsilon ]\ge 1-\delta] $$
+
+したがって、 $m_\mathcal{H}^{UC}(\epsilon/2, \delta)$ はagnostic PAC learnableにおける要請を満たす。
+
+
+したがって、 $\mathcal{H}$ は sample complexity $m_\mathcal{H}(\epsilon, \delta) \le m_\mathcal{H}^{UC}(\epsilon/2, \delta))$ でagnostic PAC learnableである。
+
+</details>
