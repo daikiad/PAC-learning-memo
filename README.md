@@ -68,6 +68,33 @@ $\text{ERM}\_\mathcal{H}(S)$
 $$
 L_\mathcal{D}(h_S) \le \min_{h\in\mathcal{H}}L_\mathcal{D}(h)+\epsilon
 $$
+<details>
+<summary>Proof</summary>
+
+Sが$\epsilon/2$ representativeであるから、
+
+$|L_S(h_S) - L_D(h_S)| \le \epsilon/2$
+
+$\therefore L_D(h_S) \le L_S(h_S)+\epsilon/2$ 
+
+また、定義より $L_S(h_S) = \min_{h\in\mathcal{H}}(L_S(h))$であるから、
+
+$\therefore L_S(h_S)+\epsilon/2 \le L_S(h)+\epsilon/2$
+
+また、 $S$は $\epsilon/2$ representativeであるから、
+
+$L_S(h) \le L_D(h) + \epsilon/2$
+
+$\therefore L_S(h) + \epsilon/2 \le L_D(h)+\epsilon/2 + \epsilon/2 = L_D(h) + \epsilon$
+
+まとめると、すべての $h\in\mathcal{H}$に対して
+
+$$L_D(h_S) \le L_S(h_S) + \epsilon/2 \le L_S(h) + \epsilon/2 \le L_D(h) + \epsilon/2 + \epsilon/2 = L_D(h) + \epsilon$$
+
+したがって、Sが $\epsilon/2$ representative ならば、 $(\forall h \in \mathcal{H})[L_D(h_S)\le L_D(h)+\epsilon]$
+
+したがって、Sが $\epsilon/2$ representativeならば、  $L_D(h_S)\le \min_{h\in\mathcal{H}} L_D(h) + \epsilon$ 
+</details>
 
 ## Definition 4.3 Uniform Convergence
 
