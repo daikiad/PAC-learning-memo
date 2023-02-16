@@ -1,26 +1,26 @@
 # PAC-learning-memo
 
 ## Notations
-error $\epsilon \in (0,1)$
+**error** $\epsilon \in (0,1)$
 
-confidence $\delta\in(0,1)$
+**confidence** $\delta\in(0,1)$
 
-sample complexity $m_H : (0,1)^2 \rightarrow \mathbb{N}$
+**sample complexity** $m_H : (0,1)^2 \rightarrow \mathbb{N}$
 
 PAC learningの定義では無数の $m_H$が考えられる場合がある。
 
-ここでは簡便のため、sample complexity $m_H$と言った場合は、無数の候補の中で最小のもの $m_H(\epsilon, \delta) = \min(m_{H,\text{candadate}}(\epsilon, \delta))$を指す。
+ここでは簡便のため、**sample complexity** $m_H$と言った場合は、無数の候補の中で最小のもの $m_H(\epsilon, \delta) = \min(m_{H,\text{candadate}}(\epsilon, \delta))$を指す。
 
-learning algorithm $A$
+**learning algorithm** $A$
 
-domain set $Z$
+**domain set** $Z$
 
 $\mathcal{D}\subset Z$
 
 
-*general loss function*  $l: \mathcal{H}\times Z \rightarrow \mathbb R_{+} $
+**general loss function**  $l: \mathcal{H}\times Z \rightarrow \mathbb R_{+} $
 に対して
-*risk function* $L_\mathcal{D}$と *empirical risk* $L_S$ を以下のように定義する
+**risk function** $L_\mathcal{D}$と **empirical risk** $L_S$ を以下のように定義する
 
 $$
 L_\mathcal{D}\centercolon= \underset{z\sim\mathcal{D}}{E}[l(h, z)]
@@ -34,8 +34,8 @@ $$
 
 ## Definition 3.4 (Agnostic PAC learnability for general loss functions)
 
-A hypothesis class $\mathcal{H}$ is agnostic PAC learnable 
-w.r.t. a set $Z$ and a loss function $l : H \times Z \rightarrow \mathbb{R}_{+}$ if
+A hypothesis class $\mathcal{H}$ is **agnostic PAC learnable**
+(w.r.t. a set $Z$ and a loss function $l : H \times Z \rightarrow \mathbb{R}_{+}$) if
 
 $$
 \left(\exists m_H (0,1)^2\rightarrow \mathbb{N}\right)
@@ -52,7 +52,7 @@ where the training set $S$ is created by drawing i.i.d. samples from $\mathcal{D
 
 # 第四章 Learning via Uniform Convergence
 ## 定義4.1 ($\epsilon$-representative sample)
-A training set $S$ is called $\epsilon$-representative (w.r.t. $Z$, $\mathcal{H}$, $l$, and $\mathcal{D}$)if
+A training set $S$ is called **$\epsilon$-representative** (w.r.t. $Z$, $\mathcal{H}$, $l$, and $\mathcal{D}$) if
 
 $$
 \forall h\in\mathcal{H}, |L_S(h)-L_\mathcal{D}(h)|\le \epsilon
