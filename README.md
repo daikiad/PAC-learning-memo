@@ -17,7 +17,10 @@ domain set $Z$
 
 $\mathcal{D}\subset Z$
 
-*general loss function* $l: \mathcal{H}\times Z \rightarrow \mathbb{R}_+$に対して以下のように *risk function* $L_\mathcal{D}$と *empirical risk* $L_S$を定義する
+
+*general loss function*  $l: \mathcal{H}\times Z \rightarrow \mathbb R_{+} $
+に対して
+*risk function* $L_\mathcal{D}$と *empirical risk* $L_S$ を以下のように定義する
 
 $$
 L_\mathcal{D}\centercolon= \underset{z\sim\mathcal{D}}{E}[l(h, z)]
