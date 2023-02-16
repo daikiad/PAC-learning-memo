@@ -128,7 +128,7 @@ $$\therefore(\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\text
 
 補題4.2より
 
-$$\therefore (\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\text{ over } Z) [\mathbb{P}\_{S\sim \mathcal{D^m}} [L_\mathcal{D}(h_S)\le \min_{h'\in \mathcal{D}} L_\mathcal{D}(h')+\epsilon ]\ge 1-\delta] $$
+$$\therefore (\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\text{ over } Z) [\mathbb{P}\_{S\sim \mathcal{D^m}} [L_\mathcal{D}(h_S)\le \min_{h'\in \mathcal{H}} L_\mathcal{D}(h')+\epsilon ]\ge 1-\delta] $$
 
 したがって、 $m_\mathcal{H}^{UC}(\epsilon/2, \delta)$ はagnostic PAC learnableにおける要請を満たす。
 
