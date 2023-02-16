@@ -47,3 +47,33 @@ $$
 $$
 
 where the training set $S$ is created by drawing i.i.d. samples from $\mathcal{D}$
+
+# 第四章 Learning via Uniform Convergence
+## 定義4.1 ($\epsilon$-representative sample)
+A training set $S$ is called $\epsilon$-representative (w.r.t. $Z$, $\mathcal{H}$, $l$, and $\mathcal{D}$)if
+
+$$
+\forall h\in\mathcal{H}, |L_S(h)-L_\mathcal{D}(h)|\le \epsilon
+$$
+
+
+## 補題4.2(Lemma 4.2)
+training set $S$が $\epsilon/2$-representative (w.r.t. $Z$, $\mathcal{H}$, $l$, and $\mathcal{D}$)のとき、全ての $\text{ERM}_\mathcal{H}(S)$、つまり全ての $h_S\in \argmin_{h\in\mathcal{H}} L_S(h)$は次を満たす。
+
+$$
+L_\mathcal{D}(h_S) \le \min_{h\in\mathcal{H}}L_\mathcal{D}(h)+\epsilon
+$$
+
+## Definition 4.3 Uniform Convergence
+
+A hypothesis class $\mathcal{H}$ has the *uniform convergence property* (w.r.t. $Z$ and $l$ ) if
+
+$$
+\exists m_{H}^{UC} \text{ s.t.}\\
+\left[(\forall \epsilon)(\forall\delta)(\forall \mathcal{D}\text{ over } Z)
+[\mathbb{P}_{S\sim \mathcal{D^m}}[\text{S is epsilon representative}]\ge 1-\delta]\right]
+$$
+
+where S is a sample of $m\ge m_\mathcal{H}^{UC}(\epsilon, \delta)$ examples drawn i.i.d. according to $\mathcal{D}$
+
+## 系4.4 (Corollary 4.4)
