@@ -46,4 +46,4 @@ $$
 \right]
 $$
 
-where the training set $S$ is created by drawing i.i.d. samples from $\mathcal{D}$ and $L_\mathcal{D}(h) \centercolon= \underset{z\sim \mathcal{D}}{\mathbb{E}}\left[l(h, z)\right]$
+where the training set $S$ is created by drawing i.i.d. samples from $\mathcal{D}$
