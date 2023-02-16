@@ -23,7 +23,7 @@ $\mathcal{D}\subset Z$
 **risk function** $L_\mathcal{D}$と **empirical risk** $L_S$ を以下のように定義する
 
 $$
-L_\mathcal{D}\centercolon= \underset{z\sim\mathcal{D}}{E}[l(h, z)]
+L_\mathcal{D}\centercolon= \underset{z\sim\mathcal{D}}{\mathbb{E}}[l(h, z)]
 $$
 
 $$
