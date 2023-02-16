@@ -60,7 +60,10 @@ $$
 
 
 ## 補題4.2(Lemma 4.2)
-training set $S$が $\epsilon/2$-representative (w.r.t. $Z$, $\mathcal{H}$, $l$, and $\mathcal{D}$)のとき、全ての $\text{ERM}_\mathcal{H}(S)$、つまり全ての $h_S\in \argmin_{h\in\mathcal{H}} L_S(h)$は次を満たす。
+training set $S$が $\epsilon/2$-representative (w.r.t. $Z$, $\mathcal{H}$, $l$, and $\mathcal{D}$)のとき、全ての
+$\text{ERM}\_\mathcal{H}(S)$
+、つまり全ての $h_S\in \text{argmin}\_{h\in\mathcal{H}} L_S(h)$
+は次を満たす。
 
 $$
 L_\mathcal{D}(h_S) \le \min_{h\in\mathcal{H}}L_\mathcal{D}(h)+\epsilon
@@ -68,7 +71,7 @@ $$
 
 ## Definition 4.3 Uniform Convergence
 
-A hypothesis class $\mathcal{H}$ has the *uniform convergence property* (w.r.t. $Z$ and $l$ ) if
+A hypothesis class $\mathcal{H}$ has the **uniform convergence property** (w.r.t. $Z$ and $l$ ) if
 
 $$
 \exists m_{H}^{UC} \text{ s.t.}\\
