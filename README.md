@@ -1,6 +1,6 @@
 # PAC-learning-memo
 
-## Prerequisite
+## Notations
 error $\epsilon \in (0,1)$
 
 confidence $\delta\in(0,1)$
@@ -29,6 +29,8 @@ $$
 $$
 L_S(h) \centercolon=\frac{1}{m} \sum_{i=1}^m (l(h, z_i))
 $$
+
+# 第三章 A Formal Learning Model
 
 ## Definition 3.4 (Agnostic PAC learnability for general loss functions)
 
