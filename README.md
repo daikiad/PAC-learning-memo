@@ -188,14 +188,30 @@ $$
  \end{align}
  $$
 
- ここで、$S_j = (x_1,\ldots,x_m)$とおき、$v_1,\ldots,v_p\in C$を$(\forall r\in[p])( v_r \not\in S_j)$とする。
- 明らかに$p\ge m$である。
+ ここで、$S_j = (x_1,\ldots,x_m)$とおく。
+
+$C$を$c\in S_j$であるか$c\not\in S_j$であるかによって分割する。
+
+ $v_j^1,\ldots,v_j^p\in C$を$(\forall r\in[p])( v_j^r \not\in S_j)$とする。
+
+ また、$u_j^1,\ldots, u_j^o\in C$を$(\forall q\in[o])(u_j^q\in S_j)$とおく。（ここで、$v$たちはuniqueでない、$u$たちはuniqueではないことに注意。したがって、$p+o=2m$であることが保証される）
+ $$
+ p+o = 2m\\
+ p = 2m-o\\
+o\le m\\
+-o \ge -m\\
+2m-o\ge 2m-m = m\\
+\therefore p \ge m
+ $$
+ したがって、$p\ge m$である。
  <!-- 全ての損失 =  -->
  $$\begin{align}
  L_{\mathcal{D}_i}(h) 
  &= \frac{1}{2m}\sum_{x\in C}1_{[h(x)\ne f_i(x)]}\\
- &\ge \frac{1}{2m}\sum_{r=1}^p1_{[h(v_r)\ne f_i(v_r)]}\\
- &\ge \frac{1}{2p}\sum_{r=1}^p1_{[h(v_r)\ne f_i(v_r)]}\\
+ &= \frac{1}{2m} \sum_{q=1}^o1_{[h(u_j^q)\ne f_i(u_j^q)]} + \sum_{r=1}^p1_{[h(v_j^r)\ne f_i(v_j^r)]}\\
+
+ &\ge \frac{1}{2m}\sum_{r=1}^p1_{[h(v_j^r)\ne f_i(v_j^r)]}\\
+ &\ge \frac{1}{2p}\sum_{r=1}^p1_{[h(v_j^r)\ne f_i(v_j^r)]}\\
  \end{align}
  $$
 
@@ -204,25 +220,26 @@ $$
  \begin{align}
  \frac{1}{T}\sum_{i=1}^T L_{\mathcal{D}_i}(A(S_j^i))
  &\ge \frac{1}{T}\sum_{i=1}^T\frac{1}{2p}\sum_{r=1}^p
- 1_{[A(S_j^i)(v_r)\ne f_i(v_r)]}\\
+ 1_{[A(S_j^i)(v_j^r)\ne f_i(v_j^r)]}\\
  &= \frac{1}{2p}\sum_{r=1}^p\frac{1}{T}\sum_{i=1}^T 
- 1_{[A(S_j^i)(v_r)\ne f_i(v_r)]}\\
+ 1_{[A(S_j^i)(v_j^r)\ne f_i(v_j^r)]}\\
+ &= \frac{1}{2}\frac{1}{p}\sum_{r=1}^p \frac{1}{T}\sum_{i=1}^T 1_{[A(S_j^i)(v_j^r)\ne f_i (v_j^r)]}\\
  &\ge \frac{1}{2} \min_{r\in[p]} \frac{1}{T}\sum_{i=1}^T 
- 1_{[A(S_j^i)(v_r)\ne f_i(v_r)]}\\
+ 1_{[A(S_j^i)(v_j^r)\ne f_i(v_j^r)]}\\
 
  \end{align}
  $$
 
- $r\in[p]$を固定すると、$f_1,\ldots,f_T$を、「$(f_i, f_{i'})$に対して$(\forall c\in C) (c=v_r \iff f_i(c)\ne f_{i'}(c))$」を満たすように$\frac{T}{2}$個のdisjoint pairに分割できる。
+ $r\in[p]$を固定すると、$f_1,\ldots,f_T$を、「$(f_i, f_{i'})$に対して$(\forall c\in C) (c=v_j^r \iff f_i(c)\ne f_{i'}(c))$」を満たすように$\frac{T}{2}$個のdisjoint pairに分割できる。
  
 
  $v_r$の定義より$v_r \not\in S_j$であるから、$S_j^i=S_j^{i'}$である。したがって、
- $$1_{[A(S_j^i)(v_r)\ne f_i(v_r)]} + 1_{[A(S_j^{i'})(v_r)\ne f_{i'}(v_r)]}=1
+ $$(\forall r\in[p])(1_{[A(S_j^i)(v_r)\ne f_i(v_r)]} + 1_{[A(S_j^{i'})(v_r)\ne f_{i'}(v_r)]}=1)
  $$
 
  したがって、
  $$
- \frac{1}{T}\sum_{i=1}^T 1_{[A(S_j^i)(v_r)\ne f_i(v_r)]} = \frac{1}{2}
+ \frac{1}{T}\sum_{i=1}^T 1_{[A(S_j^i)(v_j^r)\ne f_i(v_j^r)]} = \frac{1}{2}
  $$
 
 
