@@ -145,11 +145,11 @@ $$\therefore (\forall \epsilon \in (0,1))(\forall\delta)(\forall \mathcal{D}\tex
 
 $$(m \le \frac{\mathcal{X}}{2})
  (\exists \mathcal{D}) \text{ s.t. }
- \left\[
+ \left[
     \left(\exists f \text{ s.t. } L_\mathcal{D}(f)=0\right)
     \land
     \left(\mathbb{P}_{S\sim \mathcal{D}^m}[L_\mathcal{D}(A(S))\ge \frac{1}{8}]\ge \frac{1}{7}\right)
- \right\]
+ \right]
 $$
 
  である
