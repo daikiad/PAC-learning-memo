@@ -23,11 +23,11 @@ $\mathcal{D}\subset Z$
 **risk function** $L_\mathcal{D}$と **empirical risk** $L_S$ を以下のように定義する
 
 $$
-L_\mathcal{D}\centercolon= \underset{z\sim\mathcal{D}}{\mathbb{E}}[l(h, z)]
+L_\mathcal{D} \coloneqq \underset{z\sim\mathcal{D}}{\mathbb{E}}[l(h, z)]
 $$
 
 $$
-L_S(h) \centercolon=\frac{1}{m} \sum_{i=1}^m (l(h, z_i))
+L_S(h) \coloneqq \frac{1}{m} \sum_{i=1}^m (l(h, z_i))
 $$
 
 # 第三章 A Formal Learning Model
